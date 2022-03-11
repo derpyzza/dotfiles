@@ -1,0 +1,53 @@
+colors:
+  primary:
+    background: '0x101010'
+    foreground: '0xfffdf4'
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+  search:
+    matches:
+      foreground: '0x44475a'
+      background: '0x50fa7b'
+    focused_match:
+      foreground: '0x44475a'
+      background: '0xffb86c'
+    bar:
+      background: '0x282a36'
+      foreground: '0xf8f8f2'
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: CellForeground
+    background: '0x4c5357'
+  normal:
+    black:   '0x22202d'
+    red:     '0xf33b48'
+    green:   '0x58f667'
+    yellow:  '0xffcd54'
+    blue:    '0x5799f7'
+    magenta: '0xf04fc4'
+    cyan:    '0x59dcf7'
+    white:   '0xfffdf4'
+  bright:
+    black:   '0x3E3C49'
+    red:     '0xFD5C4D'
+    green:   '0x8FFE82'
+    yellow:  '0xFCF957'
+    blue:    '0x70B7FF'
+    magenta: '0xFF7FBD'
+    cyan:    '0x80F7FE'
+    white:   '0xFFFFFF'
+  dim:
+    black:   '0x181527'
+    red:     '0xA93176'
+    green:   '0x478976'
+    yellow:  '0xDF7945'
+    blue:    '0x4347CF'
+    magenta: '0xA03F9A'
+    cyan:    '0x3D9FE4'
+    white:   '0xe6e6d1'

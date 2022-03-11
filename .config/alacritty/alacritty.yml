@@ -1,0 +1,28 @@
+
+import:
+ - ~/.config/alacritty/foxgraf.yml
+
+window:
+  dimensions:
+    columns: 70
+    lines: 25
+  padding:
+    x: 10
+    y: 10
+  opacity:  0.8
+
+cursor:
+  style:
+   shape: block
+
+  font:
+    normal:
+      family: JetBrainsMono
+      style: Bold
+      weight: 700
+    bold:
+      family: JetBrainsMono
+      style: Extra Bold
+    italic:
+      family: JetBrainsMono
+      style: Italic

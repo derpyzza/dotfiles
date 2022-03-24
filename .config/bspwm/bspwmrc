@@ -12,6 +12,7 @@ bspc set wm_name LG3D
 
 bspc config remove_disabled_monitors  true
 bspc config remove_unplugged_monitors true
+bspc config single_monocle true
 
 bspc config border-width	7
 bspc config window_gap 		3

@@ -2,6 +2,7 @@ call plug#begin()
 	Plug 'jiangmiao/auto-pairs'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'frazrepo/vim-rainbow'
+	Plug 'bakpakin/fennel.vim'
 call plug#end()
 
 " colo rein
@@ -18,6 +19,7 @@ set ttimeoutlen=0
 set wildmenu
 set ruler
 set incsearch
+set number
 
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 

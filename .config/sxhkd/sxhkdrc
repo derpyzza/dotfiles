@@ -56,13 +56,13 @@ XF86AudioMute
         amixer set Master toggle
 # Play/Pause Spotify
 super + alt + b
-	playerctl -p spotify play-pause
+	playerctl play-pause
 # Play Previous Spotify Song
 super + alt + v
-	playerctl -p spotify previous
+	playerctl previous
 # Play Next Spotify Song
 super + alt + n
-	playerctl -p spotify next
+	playerctl next
 # Toggle polybar
 super + z
 	{pkill polybar, polybar bar &}

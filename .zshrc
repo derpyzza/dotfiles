@@ -6,7 +6,7 @@ promptinit
 setopt auto_cd
 
 zstyle ':completion:*' menu select
-export EDITOR=vim
+export EDITOR=/usr/bin/neovim
 export terminal=alacritty
 
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
@@ -45,11 +45,13 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-alias la='ls -A'
-alias ll='ls -lA'
+alias ls='exa --group-directories-first'
+alias la='exa --group-directories-first -a'
+alias ll='exa --group-directories-first -l'
+alias lgit='exa --git-ignore --group-directories-first'
 
 alias cls='clear'
-alias vim='nvim'
+alias vim='/usr/bin/neovim'
 alias chrome='chromium'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias space="ncdu"

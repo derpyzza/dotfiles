@@ -1,4 +1,4 @@
-
+#work pls
 autoload -Uz compinit promptinit
 compinit
 promptinit
@@ -57,7 +57,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias space="ncdu"
 
 PROMPT="
-%(?.%F{#B08769}%f.%F{#5E574F} {%?}%f) "
+%(?.%F{#B57EF2}%f.%F{#5E574F} {%?}%f) "
 RPROMPT="%F{#999}%~%f"
 
 # %(?. .%F{red} {%?}%f)

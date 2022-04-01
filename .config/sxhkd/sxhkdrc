@@ -1,3 +1,4 @@
+#!/bin/bash
 #
 # wm independent hotkeys
 #
@@ -9,9 +10,8 @@
 #        -no-show-icons \
 #		-theme fox
 
-#super + z
-#	eww -c ~/.config/eww/bar/ {close, open} bar	
-
+super + z
+eww open --toggle bar	
 # Help 
 super + h
 	~/.config/rofi/help.sh	
@@ -19,7 +19,7 @@ super + h
 super + Return
 	alacritty
 # Calculator 
-super + c
+super + C
 	rofi -show calc -modi calc -theme fox -no-show-match -no-sortcalc-command "echo -n '{result}' | xclip"
 # Program Launcher
 super + @space
@@ -32,9 +32,9 @@ super + b
 	firefox
 # Launch NeoVim
 super + e
-	alacritty -e nvim
+	alacritty -e /bin/neovim
 # File Manager 
-super + f
+super + F
 	pcmanfm
 # Screenshot
 super + shift + s
@@ -64,8 +64,6 @@ super + alt + v
 super + alt + n
 	playerctl next
 # Toggle polybar
-super + z
-	{pkill polybar, polybar bar &}
 
 #
 # bspwm hotkeys
@@ -82,8 +80,8 @@ super + q
 super + Tab
   bspc node -t {floating,tiled,fullscreen}
 # Set the window state
-super + {t,shift + t,s}
-	bspc node -t {tiled,pseudo_tiled,floating}
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen;xdo lower -N eww-bar}
 # Set the node flags ( marked, locked, sticky, private )
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}

@@ -1,0 +1,6 @@
+[submodule ".config/eww"]
+	path = .config/eww
+	url = https://github.com/derpyzza/eww.dots
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/derpyzza/nyoom.nvim

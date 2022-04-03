@@ -49,6 +49,8 @@ alias ls='exa --group-directories-first'
 alias la='exa --group-directories-first -a'
 alias ll='exa --group-directories-first -l'
 alias lgit='exa --git-ignore --group-directories-first'
+alias ze='vim ~/.zshrc'
+alias py='python3'
 
 alias cls='clear'
 alias vim='/usr/bin/neovim'

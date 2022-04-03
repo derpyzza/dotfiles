@@ -47,5 +47,6 @@ pkill dunst;      dunst &
 notify-send 'Welcome!' 'press super + h for keybinds :) \n <i>(super is the windows key)</i>'
 ~/monitors.sh &
 xfce4-power-manager &
+setxkbmap -option "ctrl:nocaps"
 
 #------------------------------------------------------------------------------------------

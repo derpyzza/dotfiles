@@ -51,6 +51,7 @@ alias ll='exa --group-directories-first -l'
 alias lgit='exa --git-ignore --group-directories-first'
 alias ze='vim ~/.zshrc'
 alias py='python3'
+alias tree='tree -C'
 
 alias cls='clear'
 alias vim='/usr/bin/neovim'
@@ -59,7 +60,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias space="ncdu"
 
 PROMPT="
-%(?.%F{#B57EF2}%f.%F{#5E574F} {%?}%f) "
+%(?.%F{magenta}%f.%F{blue} {%?}%f) "
 RPROMPT="%F{#999}%~%f"
 
 # %(?. .%F{red} {%?}%f)
@@ -67,9 +68,9 @@ RPROMPT="%F{#999}%~%f"
 #eval source <(/usr/local/bin/starship init zsh --print-full-init)
 #export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
-export PATH="$PATH:/home/Downloads/eww/target/release"
 export PATH="$PATH:/home/derpyzza/flutter/flutter/bin"
 export PATH="$PATH:/home/derpyzza/Downloads/android-studio/bin"
+export PATH="$PATH:/home/derpyzza/.local/share/gem/ruby/3.0.0/bin"
 
 
 export NVM_DIR="$HOME/.nvm"

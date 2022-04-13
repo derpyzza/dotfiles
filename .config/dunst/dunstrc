@@ -30,10 +30,10 @@
     height = 300
 
     # Position the notification in the top right corner
-    origin = bottom-right
+    origin = top-right
 
     # Offset from the origin
-    offset = 10x50
+    offset = 55x10
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
@@ -305,6 +305,9 @@
     timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #default_icon = /path/to/icon
+
+[progress_bar]
+  foreground: "#F00"
 
 [urgency_critical]
     background = "#101010"

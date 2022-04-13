@@ -11,7 +11,7 @@ modi: "power:~/.config/rofi/powermenu.sh,combi,window";
 	show-icons: false;
 	combi-modi: "drun,filebrowser,run";
 	window-format : "[{w}] {t}";
-	drun-display-format  : " {name}  [<span foreground="#B08769"weight='light' size='small'>({generic})</span>]" ;
+	drun-display-format  : " {name}  [<span foreground="#393939"weight='light' size='small'>({generic})</span>]" ;
 	sidebar-mode  : true ;
 	click-to-exit : true ;
 	show-icons    : false ;
@@ -37,13 +37,12 @@ modi: "power:~/.config/rofi/powermenu.sh,combi,window";
 }
 
 * {
-    background                 :  #101010aa ;
+    background                 :  #161616 ;
     alt-background             :  #202020 ;
     alt 		       		   			 :  #5D5E61 ;
-    red                        :  #F33B48 ;
-    green                      :  #58F667 ;
+    purp                       :  #B57EF2 ;
+    pink                       :  #EC76A9 ;
     background-color           :  transparent ;
-    blue                       :  #5799F7 ;
     foreground                 :  rgba ( 248, 248, 242, 100 % ) ;
 }
 
@@ -85,10 +84,11 @@ element normal {
 
 element selected
 {
-    background-color: #444;
+    background-color: var(purp);
 		border: 0 0 2 0;
-		border-color:	#B08769;
-    text-color:       var(foreground);
+		border-color: var(purp);
+    text-color:       var(background);
+    font-weight: bold;
 }
 
 element-text {
@@ -107,8 +107,8 @@ button {
 
 button selected {
     border-radius : 4;
-    background-color: #FFFa;
-    text-color:       var(alt-background);
+    background-color: var(purp);
+    text-color:       var(background);
 }
 inputbar {
     padding:    10px;
@@ -116,7 +116,7 @@ inputbar {
     spacing:    10;
     border-radius : 10px;
     text-color: var(red);
-    children:   [ prompt,entry];
+    children:   [entry];
 }
 
 entry {
@@ -126,10 +126,3 @@ entry {
 		placeholder-color : var(foreground);
 		expand: true;
 }
-
-prompt {
-    spacing:    0;
-    text-color: var(alt);
-}
-
-

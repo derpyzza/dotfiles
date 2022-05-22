@@ -17,4 +17,5 @@ xinput map-to-output "HUION Huion Tablet Pen stylus" HDMI-1
 # xsetwacom --set "HUION Huion Tablet Pen stylus" Button 2 "key +space"
 # xsetwacom --set "HUION Huion Tablet Pen stylus" Button 3 "key d" 
 
-#xsetwacom --set "HUION Huion Tablet Pen stylus" Rotate half
+# xsetwacom --set "HUION Huion Tablet Pen stylus" Rotate half
+xsetwacom --set "HUION Huion Tablet Pen stylus" Touch off

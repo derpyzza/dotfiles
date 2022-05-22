@@ -36,17 +36,18 @@ bspc rule -a ScreenKey manage=off
 xinput set-prop "DELL081C:00 044E:121F Touchpad" "libinput Tapping Enabled" 1
 xinput set-prop "DELL081C:00 044E:121F Touchpad" "libinput Natural Scrolling Enabled" 1
 
-pkill polybar;    polybar -r bar &
-# eww open bar
+~/monitors.sh &
+# pkill polybar;    polybar -r bar &
+eww open bar
 #~/bat.sh &
 pkill nitrogen;   nitrogen --restore &
 pkill picom;      picom --experimental-backends &
 pkill nm-applet;  nm-applet &
 pkill dunst;      dunst &
 # send welcome message :)
-notify-send 'Welcome!' 'press super + h for keybinds :) \n <i>(super is the windows key)</i>'
-~/monitors.sh &
 xfce4-power-manager &
 setxkbmap -option "ctrl:nocaps"
+setxkbmap -option "compose:rctrl"
+notify-send 'Welcome!' 'press super + h for keybinds :) \n <i>(super is the windows key)</i>'
 
 #------------------------------------------------------------------------------------------

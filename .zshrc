@@ -61,6 +61,7 @@ alias space="ncdu"
 
 PROMPT="
 %(?.%F{magenta}%f.%F{blue} {%?}%f) "
+PS2="%F{red}λ%f"
 RPROMPT="%F{#999}%~%f"
 
 # %(?. .%F{red} {%?}%f)
@@ -71,7 +72,8 @@ RPROMPT="%F{#999}%~%f"
 export PATH="$PATH:/home/derpyzza/flutter/flutter/bin"
 export PATH="$PATH:/home/derpyzza/Downloads/android-studio/bin"
 export PATH="$PATH:/home/derpyzza/.local/share/gem/ruby/3.0.0/bin"
-
+export PATH="$PATH:/home/derpyzza/butler"
+export PATH="$PATH:/home/derpyzza/Downloads/ideaIDE/bin/"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

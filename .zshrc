@@ -29,10 +29,6 @@ pinit ()
    mkdir $hdir $hdir/src $hdir/bin $hdir/libs
 }
 
-color () 
-{
-	printf "\033[31m"
-}
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -52,9 +48,11 @@ alias lgit='exa --git-ignore --group-directories-first'
 alias ze='vim ~/.zshrc'
 alias py='python3'
 alias tree='tree -C'
+alias bk='~/bluetooth keyboard'
+alias bb='~/bluetooth'
 
 alias cls='clear'
-alias vim='/usr/bin/neovim'
+alias vim='/usr/bin/nvim'
 alias chrome='chromium'
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias space="ncdu"
@@ -74,6 +72,7 @@ export PATH="$PATH:/home/derpyzza/Downloads/android-studio/bin"
 export PATH="$PATH:/home/derpyzza/.local/share/gem/ruby/3.0.0/bin"
 export PATH="$PATH:/home/derpyzza/butler"
 export PATH="$PATH:/home/derpyzza/Downloads/ideaIDE/bin/"
+export PATH="$PATH:/home/derpyzza/Downloads/LDTK/"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

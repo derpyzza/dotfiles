@@ -3,6 +3,8 @@
  * Rofi version: 1.7.2
  **/
 
+   /* [<span foreground="#202020"weight='light' size='small'>({generic})</span>] */
+
 configuration {
 font: "UbuntuMono Nerd Font 14";
 modi: "power:~/.config/rofi/powermenu.sh,combi,window";
@@ -11,7 +13,7 @@ modi: "power:~/.config/rofi/powermenu.sh,combi,window";
 	show-icons: false;
 	combi-modi: "drun,filebrowser,run";
 	window-format : "[{w}] {t}";
-	drun-display-format  : " {name}  [<span foreground="#393939"weight='light' size='small'>({generic})</span>]" ;
+	drun-display-format  : " {name}" ;
 	sidebar-mode  : true ;
 	click-to-exit : true ;
 	show-icons    : false ;
@@ -39,7 +41,7 @@ modi: "power:~/.config/rofi/powermenu.sh,combi,window";
 * {
     background                 :  #161616 ;
     alt-background             :  #202020 ;
-    alt 		       		   			 :  #5D5E61 ;
+    alt 		       		   			 :  #393939 ;
     purp                       :  #B57EF2 ;
     pink                       :  #EC76A9 ;
     background-color           :  transparent ;
@@ -50,14 +52,14 @@ window {
 		transparency		: "full";
     padding					: 5 3 0;
     background-color: var(background);
-    border					: 2;
-		location 				: center;
-    border-radius   : 10;
+    /* border					: 2; */
+		location 				: west;
+    /* border-radius   : 10; */
     border-color    : var(alt-background);
-    height          : 50% ; // 98
-    width           : 30% ;
+    height          : 100%; // 98
+    width           : 25% ;
 		//y-offset				: 15;
-		//x-offset				: -4;
+		/* x-offset				: 45; */
 }
 mainbox {
     padding: 10;
@@ -79,15 +81,15 @@ element {
 }
 element normal {
     //background-color: var(background);
-    text-color:       var(foreground);
+    text-color:       var(alt);
 }
 
 element selected
 {
-    background-color: var(purp);
-		border: 0 0 2 0;
+    /* background-color: var(purp); */
+		border: 0 2 0 0;
 		border-color: var(purp);
-    text-color:       var(background);
+    text-color:       var(purp);
     font-weight: bold;
 }
 
@@ -106,7 +108,7 @@ button {
 }
 
 button selected {
-    border-radius : 4;
+    border-radius : 2;
     background-color: var(purp);
     text-color:       var(background);
 }
@@ -122,7 +124,7 @@ inputbar {
 entry {
     spacing:    0;
     text-color: var(foreground);
-		placeholder: "Search...";
-		placeholder-color : var(foreground);
+		placeholder: "Search . . .";
+		placeholder-color : var(alt);
 		expand: true;
 }

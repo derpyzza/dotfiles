@@ -1,5 +1,6 @@
 
 xinput map-to-output "HUION Huion Tablet Pen stylus" HDMI-1
+# xinput map-to-output "HUION Huion Tablet Pen stylus" eDP-1
 
 #xsetwacom --set "HUION Huion Tablet Pad pad" Button 1  "key a"
 #xsetwacom --set "HUION Huion Tablet Pad pad" Button 2  "key a"

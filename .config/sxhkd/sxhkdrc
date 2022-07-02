@@ -10,23 +10,25 @@
 #        -no-show-icons \
 #		-theme fox
 
+# Make Sxhkd reload its configuration files:
+super + R
+	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded configs :D'
+
 super + z
   eww {open,close} bar
 # Help 
 super + c
-	~/.config/rofi/help.sh	
+  ~/.config/rofi/help.sh	
 # Terminal Emulator
 super + Return
-	alacritty
+  kitty
+	# alacritty
 # Calculator 
 super + C
 	rofi -show calc -modi calc -theme fox -no-show-match -no-sortcalc-command "echo -n '{result}' | xclip"
 # Program Launcher
 super + @space
 	rofi -show combi -theme fox
-# Make Sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded configs :D'
 # Launch Firefox
 super + b
 	firefox
@@ -63,6 +65,9 @@ super + alt + v
 # Play Next Spotify Song
 super + alt + n
 	playerctl next
+
+F14
+    notify-send "hello"
 
 #
 # bspwm hotkeys

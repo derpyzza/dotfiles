@@ -162,7 +162,7 @@ inputbar {
     border-radius : 10px;
     //border : 0px 5px 0px 5px;
     //border-color : var(blue);
-    text-color: var(red);
+    /* text-color: var(red); */
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
 case-indicator {

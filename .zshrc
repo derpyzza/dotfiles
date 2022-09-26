@@ -6,8 +6,9 @@ promptinit
 setopt auto_cd
 
 zstyle ':completion:*' menu select
-export EDITOR=/usr/bin/neovim
-export terminal=alacritty
+export EDITOR=/usr/bin/nvim
+export TERM=xterm-kitty
+export TERMINAL=/usr/bin/kitty
 
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search

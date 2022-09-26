@@ -117,7 +117,6 @@ inputbar {
     //background-color: var(background);
     spacing:    10;
     border-radius : 10px;
-    text-color: var(red);
     children:   [entry];
 }
 

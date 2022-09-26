@@ -1,6 +1,6 @@
 #github.com/alacritty
 import:
- - ~/.config/alacritty/nyoomfox.yml
+ - ~/.config/alacritty/fox.yml
 
 window:
   dimensions:

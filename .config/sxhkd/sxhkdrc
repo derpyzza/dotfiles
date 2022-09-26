@@ -14,80 +14,98 @@
 super + R
 	pkill -USR1 -x sxhkd; notify-send 'sxhkd' 'Reloaded configs :D'
 
+# Launch / close bar
 super + z
   eww {open,close} bar
+
 # Help 
 super + c
   ~/.config/rofi/help.sh	
+
 # Terminal Emulator
 super + Return
   kitty
-	# alacritty
+
 # Calculator 
 super + C
 	rofi -show calc -modi calc -theme fox -no-show-match -no-sortcalc-command "echo -n '{result}' | xclip"
+	
 # Program Launcher
 super + @space
 	rofi -show combi -theme fox
+
 # Launch Firefox
 super + b
 	firefox
+	
 # Launch NeoVim
 super + e
-	alacritty -e /bin/neovim
+	kitty -e $EDITOR
+
 # File Manager 
 super + F
 	pcmanfm
+
 # Screenshot
 super + shift + s
 	flameshot gui
+
 # Colour Picker
 super + 0
 	colorpicker --one-shot --preview --short | xsel -b
+
 #brightness control
 XF86MonBrightness{Up,Down}
 	brightnessctl s 10%{+,-}
+
 # Lower Volume
 {XF86AudioLowerVolume, alt + i}
 	amixer set Master 5%- && eww update vol=`pamixer --get-volume-human | tr -d '%'`
+
 # Raise Volume
 {XF86AudioRaiseVolume, alt + o}
 	amixer set Master 5%+ && eww update vol=`pamixer --get-volume-human | tr -d '%'`
+
 # Mute
 {XF86AudioMute, alt + u}
         amixer set Master toggle && eww update vol=`pamixer --get-volume-human | tr -d '%'`
+
 # Play/Pause Spotify
 super + alt + b
 	playerctl play-pause
+
 # Play Previous Spotify Song
 super + alt + v
 	playerctl previous
+
 # Play Next Spotify Song
 super + alt + n
 	playerctl next
 
-F14
-    notify-send "hello"
-
 #
-# bspwm hotkeys
+# Bspwm hotkeys
 #
 
 # quit/restart bspwm
 super + alt + {q,r}
 	bspc {quit,wm -r}
+
 # rotate bspwm windows
 super + r
   bspc node @/ -R 90
+
 # close focused window
 super + q
 	bspc node -c
+
 # Change window layout ( floating, tiled, fullscreen ) 
 super + Tab
   bspc node -t {floating,tiled,fullscreen}
+
 # Set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen;xdo lower -N eww-bar}
+
 #
 # Window Management
 #
@@ -95,26 +113,29 @@ super + {t,shift + t,s,f}
 # Focus or move the window in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
+
 # Focus the next/previous window in the current desktop
 alt + Tab
   bspc node -f next.local.!hidden.window
+
 # Focus the next/previous desktop in the current monitor
-super + bracket{h,l}
-	bspc desktop -f {prev,next}.local
+
 # Focus monitor 
 super + {_, shift +}{comma,period}
 	bspc {monitor -f, node -m} {prev,next}
+
 # Focus or send to the given desktop
 super + {_,shift + }{1-6}
 	bspc {desktop -f,node -d} '^{1-6}'
+
 #
 # move/resize
 #
 
 # expand a window by moving one of its side outward
 # move a floating window
-#super + {Left,Down,Up,Right}
-#	bspc node -v {-20 0,0 20,0 -20,20 0}
+super + shift + {h,j,k,l}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 # Resize window
 super + alt + {k,j,l,h}

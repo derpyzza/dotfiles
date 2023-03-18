@@ -21,11 +21,11 @@ modi: "power:~/.config/rofi/powermenu.sh,combi";
 	monitor		: "-4"	;
 	combi-hide-mode-prefix : true;
 	display-run	: "" ;
-	display-window 	:" " ;
-	display-ssh	: "";
-	display-drun	:  " " ;
-	display-power	: "⏻ " ;
-	display-combi	: " " ;
+	display-window 	:"window: " ;
+	display-ssh	: "ssh: ";
+	display-drun	:  "run: " ;
+	display-power	: "power: " ;
+	display-combi	: "run: " ;
 /*	display-keys	: ;*/
 	display-filebrowser: "" ;
   timeout {
@@ -39,13 +39,13 @@ modi: "power:~/.config/rofi/powermenu.sh,combi";
 }
 
 * {
-    background                 :  #161616 ;
-    alt-background             :  #050506 ;
-    alt 		       		   			 :  #393939 ;
-    purp                       :  #B57EF2 ;
-    pink                       :  #EC76A9 ;
-    background-color           :  transparent ;
-    foreground                 :  rgba ( 248, 248, 242, 100 % ) ;
+    background                	:  #161616 ;
+    alt-background 		:  #050506 ;
+    alt 			:  #393939 ;
+    purp                       	:  #B57EF2 ;
+    pink                       	:  #EC76A9 ;
+    background-color           	:  transparent ;
+    foreground                 	:  rgba ( 248, 248, 242, 100 % ) ;
 }
 
 window {
@@ -55,9 +55,9 @@ window {
 	/* border					: 2; */
 	location 	: center;
 	color: var(alt-background);
-    	border-radius   : 20;
+    	border-radius   : 0;
     	color    : var(alt-background);
-    	height          : 60%; // 98
+    	height          : 40%; // 98
     	width           : 40% ;
     	y-offset	: 0;
     	x-offset	: 0;
@@ -67,7 +67,7 @@ mainbox {
     border:  0;
     orientation: vertical;
     background-color: transparent;
-    children: ["inputbar", "listview", "mode-switcher"];
+    children: ["inputbar", "listview"];
 }
 
 
@@ -83,7 +83,6 @@ listview {
 }
 element {
     padding: 10px;
-    border-radius: 20px;
 
     text-color:     #556;
 }
@@ -107,33 +106,38 @@ element-text {
 
 button {
     //background-color:               var(background);
-	border-radius : 20;
     margin: 						0 5 0;
     padding: 						5;
     text-color: 					var(alt);
 }
 
 button selected {
-		border-radius : 20;
-		background-color: var(background);
-		text-color:       #bbc;
-		border: 2;
-		border-color: #bbc;
+		background-color: #bbc;
+		text-color:       var(background);
 }
 inputbar {
-    	padding:    60 30px;
+    	padding:    10px;
 	orientation: horizontal;
-    	background-color: var(background);
-	background-image: url("/home/derpyzza/Downloads/wallpaper.jpg", width);
+    	//background-color: var(background);
+	//background-image: url("/home/derpyzza/Downloads/wallpaper.jpg", width);
     	spacing:    10;
-    	border-radius : 20px;
-    	children:   [entry];
+    	border-radius : 0px;
+    	children:   [prompt, entry];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  var(background);
+    background-color: #556;
+    padding: 8px 20px;
+    border-radius: 1px;
 }
 
 entry {
 		expand: false;
 		width: 200px;
-		padding: 14px;
+		padding: 10px;
 		border-radius: 20px;
 		text-color: #bbc;
 		background-color: var(background);

@@ -41,11 +41,11 @@ xinput set-prop "DELL081C:00 044E:121F Touchpad" "libinput Natural Scrolling Ena
 xinput set-prop "DELL081C:00 044E:121F Touchpad" "libinput Disable While Typing Enabled" 0
 
 ~/monitors.sh &
-# pkill polybar;    polybar -r bar &
+polybar -r bar &
 eww open bar
 #~/bat.sh &
 pkill nitrogen;   nitrogen --restore &
-pkill picom;      picom --experimental-backends &
+picom &
 pkill nm-applet;  nm-applet &
 pkill dunst;      dunst &
 # send welcome message :)

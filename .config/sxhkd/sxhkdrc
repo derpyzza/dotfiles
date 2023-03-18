@@ -24,7 +24,7 @@ super + c
 
 # Terminal Emulator
 super + Return
-  kitty
+  alacritty
 
 # Calculator 
 super + C
@@ -32,7 +32,7 @@ super + C
 	
 # Program Launcher
 super + @space
-	rofi -show combi -theme fox
+	rofi -show combi -theme dark
 
 # Launch Firefox
 super + b

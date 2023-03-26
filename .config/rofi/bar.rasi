@@ -1,0 +1,148 @@
+/**
+ * rofi -dump-theme output.
+ * Rofi version: 1.7.2
+ **/
+
+   /* [<span foreground="#202020"weight='light' size='small'>({generic})</span>] */
+
+configuration {
+font: "JetBrainsMono Nerd Font Mono";
+modi: "power:~/.config/rofi/powermenu.sh,combi";
+//location : 0;
+	fixed-num-lines: true;
+	show-icons: false;
+	combi-modi: "drun,filebrowser,run";
+	window-format : "{t}";
+	drun-display-format  : " {name}" ;
+	sidebar-mode  	: true ;
+	click-to-exit 	: true ;
+	show-icons    	: false ;
+	matching      	: "fuzzy" ;
+	monitor		: "-4"	;
+	combi-hide-mode-prefix : true;
+	display-run	: "" ;
+	display-window 	:"window: " ;
+	display-ssh	: "ssh: ";
+	display-drun	:  "run: " ;
+	display-power	: "power: " ;
+	display-combi	: "run: " ;
+/*	display-keys	: ;*/
+	display-filebrowser: "" ;
+  timeout {
+      action: "kb-cancel";
+      delay:  0;
+  }
+  filebrowser {
+      directories-first: true;
+      sorting-method:    "name";
+  }
+}
+
+* {
+    background                	:  #161616 ;
+    alt-background 							:  #050506 ;
+    alt 												:  #393939 ;
+    purp                       	:  #B57EF2 ;
+    pink                       	:  #EC76A9 ;
+    background-color           	:  transparent ;
+    foreground                 	:  rgba ( 248, 248, 242, 100 % ) ;
+}
+
+window {
+	transparency		: "false";
+	padding					: 5 3 0;
+	background-color: var(background);
+	/* border					: 2; */
+	location 	: center;
+	color: var(alt-background);
+    	border-radius   : 0;
+    	color    : var(alt-background);
+    	height          : 60; // 98
+    	width           : 100% ;
+    	y-offset	: 0;
+    	x-offset	: 0;
+}
+
+mainbox {
+    padding: 10;
+    border:  0;
+    orientation: vertical;
+    background-color: transparent;
+    children: ["inputbar", "listview"];
+}
+
+
+textbox {
+	text-color: var(foreground);
+	blink: false;
+}
+
+listview {
+		layout:horizontal;
+    padding:      10 ;
+    scrollbar:    true;
+    spacing:      8px ;
+    fixed-height: 10px;
+}
+element {
+    padding: 10px;
+
+    text-color:     #556;
+}
+element normal {
+    text-color:       #556;
+}
+
+element selected
+{
+    background-color: #bbc;
+		border: 1;
+	border-color: #bbc;
+    	text-color:       var(background);
+    	font-weight: bold;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+button {
+    //background-color:               var(background);
+    margin: 						0 5 0;
+    padding: 						5;
+    text-color: 					var(alt);
+}
+
+button selected {
+		background-color: #bbc;
+		text-color:       var(background);
+}
+inputbar {
+    	padding:    10px;
+			orientation: horizontal;
+    	spacing:    10;
+    	border-radius : 0px;
+    	children:   [prompt, entry];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  var(background);
+    background-color: #556;
+    padding: 8px 20px;
+    border-radius: 1px;
+}
+
+entry {
+		expand: false;
+		width: 200px;
+		padding: 10px;
+		border-radius: 20px;
+		text-color: #bbc;
+		background-color: var(background);
+		placeholder: "Search . . .";
+		placeholder-color : var(alt);
+		expand: true;
+}

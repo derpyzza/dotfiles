@@ -49,7 +49,7 @@ font-2 = "JetBrainsMono Nerd Font Mono:size=26;5"
 
 module-margin-left = 2
 
-modules-left = time spotify
+modules-left = time
 modules-center = bspwm
 modules-right = battery volume margin
 

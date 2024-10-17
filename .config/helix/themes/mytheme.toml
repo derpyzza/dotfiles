@@ -1,0 +1,8 @@
+inherits = "base16_transparent"
+
+"comment" = { fg = "gray" }
+
+"ui.linenr" = { fg = "gray" }
+"ui.linenr.selected" = { fg = "magenta"}
+
+"ui.virtual.inlay-hint" = {fg = "gray", bg = "black"}

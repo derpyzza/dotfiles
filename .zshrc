@@ -51,5 +51,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/home/derpyzza/.bun/_bun" ] && source "/home/derpyzza/.bun/_bun"
 
 # bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/usr/local/:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+export PATH="/home/derpyzza/.local/bin:$PATH"
+export PATH="/home/derpyzza/Downloads/dart-sdk/bin:$PATH"
+export PATH="/home/derpyzza/.cargo/bin:$PATH"

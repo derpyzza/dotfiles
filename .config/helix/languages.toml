@@ -1,0 +1,19 @@
+
+[language-server.fennel-lsp]
+command = "fennel-ls"
+args = ["--server"]
+
+[[language]]
+name = "fennel"
+scope = "source.fennel"
+# injection-regex = "mylang"
+file-types = ["fnl"]
+comment-tokens = ";"
+formatter = { command = "mylang-formatter" , args = ["--stdin"] }
+language-servers = [ "fennel-lsp" ]
+
+[[language]]
+name = "river"
+scope = "source.river"
+file-types = ["rvr"]
+comment-tokens = "//"

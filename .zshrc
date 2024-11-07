@@ -6,7 +6,7 @@ promptinit
 setopt auto_cd
 
 zstyle ':completion:*' menu select
-export EDITOR=/usr/bin/nvim
+export EDITOR=/usr/bin/hx
 
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -43,20 +43,6 @@ PROMPT="
 PS2="%F{red}::+ %f"
 RPROMPT="%F{blue}%~%f"
 
-export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" &  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" & # This loads nvm bash_completion
-
-# bun completions
-[ -s "/home/derpyzza/.bun/_bun" ] && source "/home/derpyzza/.bun/_bun"
-
-# bun
-export PATH="/usr/local/:$PATH"
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-
 export PATH="/home/derpyzza/.local/bin:$PATH"
-export PATH="/home/derpyzza/Downloads/dart-sdk/bin:$PATH"
-export PATH="/home/derpyzza/.cargo/bin:$PATH"
+
+source ~/.export.sh

@@ -4,6 +4,7 @@ theme = "mytheme"
 line-number = "relative"
 auto-completion = true
 color-modes = true
+soft-wrap.enable = true
 
 [editor.cursor-shape]
 insert = "bar"
